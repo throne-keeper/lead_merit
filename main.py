@@ -5,8 +5,9 @@ import sqlalchemy as sql
 
 if __name__ == '__main__':
 
-    conn = sql.create_engine('sqlite:////Users/matthardy/git/github/lead_merit/sqlite/embedded').connect()
-    pd.read_sql('select * from tblEmployee', conn)
+    conn = sql.create_engine('sqlite:///sqlite/embedded.db').connect()
+    df = pd.read_sql('select * from tblEmployee', conn)
+    print(df)
     # df = pd.read_sql_table('tblEmployee', conn)
     # print(df)
 
