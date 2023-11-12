@@ -52,3 +52,10 @@ class Employee:
     @property
     def displayName(self):
         return f'{self._firstName} {self._lastName}'
+
+    def __str__(self) -> str:
+        return f'Name: {self.displayName}, Title: {self.title}, Email: {self.email}'
+
+    def __repr__(self) -> str:
+        return f'Employee(\'{self.pkEmployeeId}\', \'{self.firstName}\', \'{self.lastName}\', \'{self.title}\', ' \
+               f'\'{self.email}\')'
